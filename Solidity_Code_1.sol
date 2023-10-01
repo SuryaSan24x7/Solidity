@@ -51,9 +51,11 @@ contract Program1
         require(p <= 0,"Enter a valid Power ");
          uint256 result = 1;
 
-    for (uint256 i = 1; i <= p; i++) {
-        result = result * a;
-    }
+        while (p != 0) {
+        result *= a;
+        --p;
+        }
+        return result;
 
     return result;
     }
